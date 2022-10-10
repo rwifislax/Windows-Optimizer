@@ -53,7 +53,7 @@ REM ECHO !vari2!
 
 IF "%vari1%"=="SSD" (
 	echo [+] disk C: is SSD
-	defrag C: /H /Optimize /U
+	defrag C: /H /ReTrim /U
 ) ELSE (
 	echo [+] disk C: is HDD
 	REM Identify fragmentation percentage
@@ -65,8 +65,9 @@ IF "%vari1%"=="SSD" (
 	REM Print percentage fragmented
 	echo(!var1!
 	echo(!var8!
-	echo(!var1! > C:\Admin\log.txt
-	echo(!var8! >> C:\Admin\log.txt
+	REM Uncomment if you want to store percentage in log file.
+	REM echo(!var1! > C:\log.txt
+	REM echo(!var8! >> C:\log.txt
 	REM Get percentage from phrase
 	for %%F in (!var8!) do set number1=%%~nxF
 	REM echo(!number1!
@@ -82,7 +83,7 @@ REM two true conditions if statement
 echo.
 IF "%vari2%"=="SSD" IF "%drived%"=="1" (
 	echo [+] disk D: is SSD
-	defrag C: /H /Optimize /U
+	defrag C: /H /ReTrim /U
 ) 
 IF "%vari2%"=="HDD" IF "%drived%"=="1" (
 	echo [+] disk D: is HDD
@@ -94,8 +95,9 @@ IF "%vari2%"=="HDD" IF "%drived%"=="1" (
 	REM Print percentage fragmented
 	echo(!var1!
 	echo(!var8!
-	echo(!var1! > C:\Admin\log.txt
-	echo(!var8! >> C:\Admin\log.txt
+	REM Enable if you want to store percentage in log file.
+	REM echo(!var1! > D:\log.txt
+	REM echo(!var8! >> D:\log.txt
 	REM Get number from drive percentage
 	for %%F in (!var8!) do set number1=%%~nxF
 	REM echo(!number1!
@@ -110,4 +112,6 @@ IF "%vari2%"=="HDD" IF "%drived%"=="1" (
 
 echo [-] Finished
 ENDLOCAL
+REM Substitute pause for "timeout 10" if you want it to automatically close the window in 10s.
 pause
+
