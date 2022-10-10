@@ -1,6 +1,7 @@
 # Windows-Optimizer v1.0
 
 This tool was created to optimize all Windows Computers in the entire world.
+
 Instructions:
 - Right click on file and click on "Run As Administrator"
 
