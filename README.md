@@ -2,7 +2,7 @@
 
 This tool was created to optimize all Windows Computers in the entire world.
 
-Instructions:
+# Instructions:
 - Right click on file and click on "Run As Administrator"
 
 Tasks:
