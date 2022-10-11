@@ -5,7 +5,7 @@ This tool was created to optimize all Windows Computers in the entire world. One
 # Instructions:
 - Open cmd as admin and run "cleanmgr /sageset:0".
 - Click the boxes for your cleaning preferences.
-- Right click on file and click on "Run As Administrator".
+- Right click on the .bat file and click on "Run As Administrator".
 - Press enter when finished.
 
 # Tasks:
