@@ -45,7 +45,7 @@ echo.
 
 REM Check if we will obtimize all drives
 echo [+] Drives found on the system:
-powershell.exe -c "Get-PhysicalDisk | Sort-Object DeviceId | ForEach-Object {$physicalDisk = $_; $physicalDisk | Get-Disk | Get-Partition | Where-Object DriveLetter | Select-Object DriveLetter, @{n='MediaType';e={ $physicalDisk.MediaType }}}"
+powershell.exe -c "Get-PhysicalDisk | Sort-Object DeviceId | ForEach-Object {$physicalDisk = $_; $physicalDisk | Get-Disk | Get-Partition | Where-Object DriveLetter | Get-Volume | Select-Object DriveLetter, FileSystemLabel, @{n='MediaType';e={ $physicalDisk.MediaType }}}"
 set /p choice_drives= "[?] Do you want to optimize all drives?(y/n): "
 echo.
 
