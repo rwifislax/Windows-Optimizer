@@ -20,3 +20,7 @@ This tool was created to optimize all Windows Computers. One of the culprits of 
 - For HDD drives, it will analyse it first, and identify if it needs defragging. It will only defrag if it is needed, saving time.
 - Identifies if disks have errors, and only runs a more thourough chkdsk scan if errors are found.
 - Identifies processes using most CPU time using Powershell, and so spotting stealthy cpu intensive malware. Some cryptominers might kill themselves when launching the task manager to view resources.
+
+# Image:
+
+![alt text](image.png)
